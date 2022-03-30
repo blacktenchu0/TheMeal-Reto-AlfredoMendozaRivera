@@ -1,0 +1,41 @@
+table {
+  width: 100%;
+  text-align: center;
+  background: #211d1d;
+}
+.tabla-header {
+  background: #171414;
+  text-align: center;
+  color: whitesmoke;
+}
+.mat-row.hovered {
+  background: #524c4c;
+  cursor: pointer;
+}
+.row {
+  padding: 0px;
+  margin: 0px;
+}
+
+:host ::ng-deep .mat-sort-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+th.mat-header-cell {
+  text-align: center;
+}
+
+.img-platillo {
+  text-align: center;
+  margin: 10px;
+}
+
+td {
+  color: whitesmoke;
+}
+
+.paginator-container {
+  background: #171414;
+  color: whitesmoke;
+}

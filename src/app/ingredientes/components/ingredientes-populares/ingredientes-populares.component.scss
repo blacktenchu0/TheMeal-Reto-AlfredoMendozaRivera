@@ -1,0 +1,51 @@
+.contenedor-general {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .mat-card {
+    width: 90%;
+    background: #2c2727;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    .tituloIngrediente {
+      display: inline-block;
+      align-content: center;
+      width: 100%;
+
+      h2 {
+        width: 100%;
+        color: #ff7517;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 1000;
+        letter-spacing: 2px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .tabla-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        .no-registros-container {
+          width: 100%;
+          color: whitesmoke;
+          background: #ff7517;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 200;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

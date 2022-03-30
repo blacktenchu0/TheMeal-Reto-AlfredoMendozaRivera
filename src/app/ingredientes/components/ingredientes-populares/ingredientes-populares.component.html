@@ -1,0 +1,19 @@
+<div class="contenedor-general">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-header class="tituloIngrediente">
+      <h2>Ingredientes populares</h2>
+      <div class="tabla-container">
+        <div
+          [hidden]="dataIngredientesPopulares?.length! > 0"
+          class="no-registros-container"
+        >
+          No hay registros en la base de datos.
+        </div>
+        <app-ingredientes-populares-list
+          [hidden]="dataIngredientesPopulares?.length == 0 || dataIngredientesPopulares == null"
+          (platillosPorIngrediente)="getPlatillosPorIngrediente($event)"
+        ></app-ingredientes-populares-list>
+      </div>
+    </mat-card-header>
+  </mat-card>
+</div>

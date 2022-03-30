@@ -1,0 +1,98 @@
+<div class="contenedor-general">
+  <mat-toolbar class="header">
+    <div class="header-container">
+      <div class="img-banner">
+        <img
+          src="/assets/images/bannerHeader.png"
+          alt="LaTradicionEsPrimeroBanner"
+        />
+      </div>
+      <div class="toggle" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="container">
+    <mat-sidenav
+      #sidenav
+      mode="over"
+      class="sidenav"
+      [fixedInViewport]="options.value.fixed"
+      [fixedTopGap]="options.value.top"
+      [fixedBottomGap]="options.value.bottom"
+    >
+      <mat-nav-list class="my-2 text-center content-nav-list">
+        <mat-expansion-panel class="mat-expansion-panel-container">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="i-item-menu">list</mat-icon>
+              <span class="pl-3 span-container">Menú</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a
+            mat-list-item
+            href=""
+            [routerLink]="'/home'"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            <mat-icon class="mx-2 i-sub-item">home</mat-icon
+            ><span class="span-container">Bienvenida</span>
+          </a>
+
+          <a
+            mat-list-item
+            href=""
+            [routerLink]="'/ingredientes/populares'"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            <mat-icon class="mx-2 i-sub-item">grade</mat-icon
+            ><span class="span-container">Ingredientes populares</span>
+          </a>
+
+          <a
+            mat-list-item
+            href=""
+            [routerLink]="'/platillos'"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            <mat-icon class="mx-2 i-sub-item">view_list</mat-icon
+            ><span class="span-container">Platillos</span>
+          </a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel class="mat-expansion-panel-container">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <mat-icon class="i-item-menu">manage_accounts</mat-icon>
+              <span class="pl-3 span-container">Opciones</span>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <a
+            mat-list-item
+            href=""
+            [routerLink]="'/usuario/perfil'"
+            routerLinkActive="active"
+            (click)="sidenav.toggle()"
+          >
+            <mat-icon class="mx-2 i-sub-item">account_circle</mat-icon
+            ><span class="span-container">Mi perfil</span>
+          </a>
+        </mat-expansion-panel>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <div class="content-principal">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-container>
+
+  <mat-toolbar class="footer">
+    <div class="footer-container">© LA TRADICIÓN ES PRIMERO, 2022.</div>
+  </mat-toolbar>
+</div>

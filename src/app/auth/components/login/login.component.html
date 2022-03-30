@@ -1,0 +1,62 @@
+<div class="contenedor-general">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-header class="tituloLogin">
+      <div class="img-logo">
+        <img
+          src="/assets/images/logoBlanco.png"
+          alt="LaTradicionEsPrimeroLogo"
+          width="328"
+          height="157"
+        />
+      </div>
+      <h2>Iniciar sesión</h2>
+    </mat-card-header>
+    <mat-card-actions>
+      <form [formGroup]="formLogin" (submit)="login()">
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label
+            ><mat-icon class="white-icon">account_circle</mat-icon
+            >Usuario</mat-label
+          >
+          <input
+            matInput
+            autocomplete="off"
+            maxlength="20"
+            formControlName="usuario"
+            (keyup)="onEnterLogin($event)"
+          />
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="fill">
+          <mat-label
+            ><mat-icon class="white-icon">lock</mat-icon>Contraseña</mat-label
+          >
+          <input
+            matInput
+            [type]="hidePassword ? 'password' : 'text'"
+            autocomplete="off"
+            maxlength="30"
+            formControlName="password"
+            (keyup)="onEnterLogin($event)"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            class="button-hide"
+            (click)="hidePassword = !hidePassword"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hidePassword"
+          >
+            <mat-icon>
+              {{ hidePassword ? "visibility" : "visibility_off" }}
+            </mat-icon>
+          </button>
+        </mat-form-field>
+        <div class="button-container">
+          <button [disabled]="formLogin.invalid" type="submit">
+            Iniciar sesión
+          </button>
+        </div>
+      </form>
+    </mat-card-actions>
+  </mat-card>
+</div>

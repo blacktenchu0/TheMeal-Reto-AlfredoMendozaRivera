@@ -1,0 +1,50 @@
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z6">
+  <!-- Weight Column -->
+  <ng-container matColumnDef="strMealThumb">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="tabla-header">
+      Imagen
+    </th>
+    <td mat-cell *matCellDef="let element">
+      <div class="img-platillo">
+        <img
+          src="{{ element.strMealThumb }}"
+          alt="platillo.strMeal"
+          height="50"
+        />
+      </div>
+    </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="idMeal">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="tabla-header">
+      ID
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.idMeal | ifEmpty}}</td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="strMeal">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header class="tabla-header">
+      Nombre
+    </th>
+    <td mat-cell *matCellDef="let element">{{ element.strMeal | ifEmpty}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns; let element"
+    (click)="getDetallePlatillo(element.idMeal)"
+    [ngClass]="{ hovered: row.hovered }"
+    (mouseover)="row.hovered = true"
+    (mouseout)="row.hovered = false"
+  ></tr>
+</table>
+
+<mat-paginator
+  class="paginator-container"
+  [length]="100"
+  [pageSize]="10"
+  [pageSizeOptions]="[10, 25, 60, 100]"
+></mat-paginator>

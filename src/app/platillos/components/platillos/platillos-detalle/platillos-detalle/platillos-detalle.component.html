@@ -1,0 +1,239 @@
+<div class="contenedor-general" *ngIf="platillo">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-header class="tituloPlatillo">
+      <h2>{{ platillo.strMeal }}</h2>
+      <div class="img-platillo">
+        <img
+          src="{{ platillo.strMealThumb }}"
+          alt="platillo.strMeal"
+          height="300"
+        />
+      </div>
+      <h3>Ingredientes</h3>
+      <div class="ingredientes-contenedor">
+        <div>
+          <ul>
+            <li
+              *ngIf="
+                platillo.strIngredient1 &&
+                platillo.strMeasure1 &&
+                platillo.strIngredient1 != '' &&
+                platillo.strMeasure1 != ''
+              "
+            >
+              {{ platillo.strIngredient1 }}: {{ platillo.strMeasure1 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient2 &&
+                platillo.strMeasure2 &&
+                platillo.strIngredient2 != '' &&
+                platillo.strMeasure2 != ''
+              "
+            >
+              {{ platillo.strIngredient2 }}: {{ platillo.strMeasure2 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient3 &&
+                platillo.strMeasure3 &&
+                platillo.strIngredient3 != '' &&
+                platillo.strMeasure3 != ''
+              "
+            >
+              {{ platillo.strIngredient3 }}: {{ platillo.strMeasure3 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient4 &&
+                platillo.strMeasure4 &&
+                platillo.strIngredient4 != '' &&
+                platillo.strMeasure4 != ''
+              "
+            >
+              {{ platillo.strIngredient4 }}: {{ platillo.strMeasure4 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient5 &&
+                platillo.strMeasure5 &&
+                platillo.strIngredient5 != '' &&
+                platillo.strMeasure5 != ''
+              "
+            >
+              {{ platillo.strIngredient5 }}: {{ platillo.strMeasure5 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient6 &&
+                platillo.strMeasure6 &&
+                platillo.strIngredient6 != '' &&
+                platillo.strMeasure6 != ''
+              "
+            >
+              {{ platillo.strIngredient6 }}: {{ platillo.strMeasure6 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient7 &&
+                platillo.strMeasure7 &&
+                platillo.strIngredient7 != '' &&
+                platillo.strMeasure7 != ''
+              "
+            >
+              {{ platillo.strIngredient7 }}: {{ platillo.strMeasure7 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient8 &&
+                platillo.strMeasure8 &&
+                platillo.strIngredient8 != '' &&
+                platillo.strMeasure8 != ''
+              "
+            >
+              {{ platillo.strIngredient8 }}: {{ platillo.strMeasure8 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient9 &&
+                platillo.strMeasure9 &&
+                platillo.strIngredient9 != '' &&
+                platillo.strMeasure9 != ''
+              "
+            >
+              {{ platillo.strIngredient9 }}: {{ platillo.strMeasure9 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient10 &&
+                platillo.strMeasure10 &&
+                platillo.strIngredient10 != '' &&
+                platillo.strMeasure10 != ''
+              "
+            >
+              {{ platillo.strIngredient10 }}: {{ platillo.strMeasure10 }}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li
+              *ngIf="
+                platillo.strIngredient11 &&
+                platillo.strMeasure11 &&
+                platillo.strIngredient11 != '' &&
+                platillo.strMeasure11 != ''
+              "
+            >
+              {{ platillo.strIngredient11 }}: {{ platillo.strMeasure11 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient12 &&
+                platillo.strMeasure12 &&
+                platillo.strIngredient12 != '' &&
+                platillo.strMeasure12 != ''
+              "
+            >
+              {{ platillo.strIngredient12 }}: {{ platillo.strMeasure12 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient13 &&
+                platillo.strMeasure13 &&
+                platillo.strIngredient13 != '' &&
+                platillo.strMeasure13 != ''
+              "
+            >
+              {{ platillo.strIngredient13 }}: {{ platillo.strMeasure13 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient14 &&
+                platillo.strMeasure14 &&
+                platillo.strIngredient14 != '' &&
+                platillo.strMeasure14 != ''
+              "
+            >
+              {{ platillo.strIngredient14 }}: {{ platillo.strMeasure14 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient15 &&
+                platillo.strMeasure15 &&
+                platillo.strIngredient15 != '' &&
+                platillo.strMeasure15 != ''
+              "
+            >
+              {{ platillo.strIngredient15 }}: {{ platillo.strMeasure15 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient16 &&
+                platillo.strMeasure16 &&
+                platillo.strIngredient16 != '' &&
+                platillo.strMeasure16 != ''
+              "
+            >
+              {{ platillo.strIngredient16 }}: {{ platillo.strMeasure16 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient17 &&
+                platillo.strMeasure17 &&
+                platillo.strIngredient17 != '' &&
+                platillo.strMeasure17 != ''
+              "
+            >
+              {{ platillo.strIngredient17 }}: {{ platillo.strMeasure17 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient18 &&
+                platillo.strMeasure18 &&
+                platillo.strIngredient18 != '' &&
+                platillo.strMeasure18 != ''
+              "
+            >
+              {{ platillo.strIngredient18 }}: {{ platillo.strMeasure18 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient19 &&
+                platillo.strMeasure19 &&
+                platillo.strIngredient19 != '' &&
+                platillo.strMeasure19 != ''
+              "
+            >
+              {{ platillo.strIngredient19 }}: {{ platillo.strMeasure19 }}
+            </li>
+            <li
+              *ngIf="
+                platillo.strIngredient20 &&
+                platillo.strMeasure20 &&
+                platillo.strIngredient20 != '' &&
+                platillo.strMeasure20 != ''
+              "
+            >
+              {{ platillo.strIngredient20 }}: {{ platillo.strMeasure20 }}
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h3>Instrucciones</h3>
+      <p>{{ platillo.strInstructions }}</p>
+      <h3>Vídeo</h3>
+      <div class="video-container">
+        <youtube-player
+        *ngIf="videoId != ''"
+          videoId="{{videoId}}"
+          suggestedQuality="highres"
+          [height]="250"
+          [width]="500"
+          [startSeconds]="0"
+        >
+        </youtube-player>
+      </div>
+    </mat-card-header>
+  </mat-card>
+</div>

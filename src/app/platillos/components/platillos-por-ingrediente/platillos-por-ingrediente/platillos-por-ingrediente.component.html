@@ -1,0 +1,34 @@
+<div class="contenedor-general">
+  <div class="card-container">
+  <mat-card
+    *ngFor="let platillo of platillosPorIngrediente"
+    class="mat-elevation-z8"
+  >
+    <mat-card-header class="tituloPlatillo">
+      <h3>{{ platillo.strMeal }}</h3>
+      <div
+        class="img-platillo"
+        *ngIf="
+          platillo &&
+          platillo.strMealThumb &&
+          platillo.strMealThumb != null &&
+          platillo.strMealThumb != ''
+        "
+      >
+        <img
+          src="{{ platillo.strMealThumb }}"
+          alt="platillo.strMeal"
+          height="200"
+        />
+      </div>
+    </mat-card-header>
+    <mat-card-actions>
+      <div class="button-container">
+        <button (click)="getDetallePlatillo(platillo.idMeal)">
+          Ver detalle del platillo
+        </button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+</div>

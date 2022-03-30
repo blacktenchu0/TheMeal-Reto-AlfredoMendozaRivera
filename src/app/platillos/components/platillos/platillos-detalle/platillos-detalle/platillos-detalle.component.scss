@@ -1,0 +1,70 @@
+.contenedor-general {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .mat-card {
+    width: 90%;
+    background: #2c2727;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+
+    .tituloPlatillo {
+      display: inline-block;
+      align-content: center;
+      width: 100%;
+      .img-platillo {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        width: 100%;
+        color: #ff7517;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 1000;
+        letter-spacing: 2px;
+      }
+
+      h3 {
+        width: 100%;
+        color: #ff7517;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+
+      p {
+        width: 100%;
+        color: #ff7517;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      .video-container{
+        width: 100%;
+        text-align: center;
+      }
+
+      .ingredientes-contenedor {
+        position: relative;
+        color: #ff7517;
+        text-align: center;
+        font-size: 20px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+    }
+  }
+}

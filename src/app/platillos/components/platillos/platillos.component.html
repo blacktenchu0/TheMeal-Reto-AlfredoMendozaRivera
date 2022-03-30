@@ -1,0 +1,81 @@
+<div class="contenedor-general">
+  <mat-card class="mat-elevation-z8">
+    <mat-card-header class="tituloPlatillo">
+      <h2>Platillos</h2>
+      <div
+        class="filtros-container"
+        [hidden]="dataPlatillos?.length == 0 || dataPlatillos == null"
+      >
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Áreas</mat-label>
+          <mat-select
+            [(ngModel)]="areaSeleccionado"
+            (selectionChange)="filtrarTablaAreas()"
+          >
+            <mat-option
+              style="background: #3e3939; color: whitesmoke"
+              [value]=""
+              >Ninguno</mat-option
+            >
+            <mat-option
+              style="background: #3e3939; color: whitesmoke"
+              *ngFor="let area of dataAreas"
+              [value]="area.strArea"
+              >{{ area.strArea }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Ingredientes</mat-label>
+          <mat-select
+            [(ngModel)]="ingredienteSeleccionado"
+            (selectionChange)="filtrarTablaIngredientes()"
+          >
+            <mat-option
+              style="background: #3e3939; color: whitesmoke"
+              [value]=""
+              >Ninguno</mat-option
+            >
+            <mat-option
+              style="background: #3e3939; color: whitesmoke"
+              *ngFor="let ingrediente of dataIngredientes"
+              [value]="ingrediente.strIngredient"
+              >{{ ingrediente.strIngredient }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Categorias</mat-label>
+          <mat-select
+            [(ngModel)]="categoriaSeleccionado"
+            (selectionChange)="filtrarTablaCategorias()"
+          >
+            <mat-option
+              style="background: #3e3939; color: whitesmoke"
+              [value]=""
+              >Ninguno</mat-option
+            >
+            <mat-option
+              style="background: #3e3939; color: whitesmoke"
+              *ngFor="let categoria of dataCategorias"
+              [value]="categoria.strCategory"
+              >{{ categoria.strCategory }}</mat-option
+            >
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="tabla-container">
+        <div
+          [hidden]="dataPlatillos?.length! > 0"
+          class="no-registros-container"
+        >
+          No hay registros en la base de datos.
+        </div>
+        <app-platillos-list
+          [hidden]="dataPlatillos?.length == 0 || dataPlatillos == null"
+          (platillosDetalles)="getDetallePlatillo($event)"
+        ></app-platillos-list>
+      </div>
+    </mat-card-header>
+  </mat-card>
+</div>

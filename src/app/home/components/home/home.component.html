@@ -1,0 +1,30 @@
+<div class="contenedor-general">
+  <div class="tituloHome">
+    <h2>¡Bienvenido a La Tradición es Primero, {{ usuario.nombre }}!</h2>
+    <h4>
+      Te recomendamos visitar la página de nuestro platillo del día, ¡No te
+      arrepentiras!
+    </h4>
+  </div>
+  <mat-card class="mat-elevation-z8">
+    <mat-card-header class="tituloPlatillo">
+      <h3>{{ platillo.strMeal }}</h3>
+      <div
+        class="img-platillo"
+        *ngIf="
+          platillo &&
+          platillo.strMealThumb &&
+          platillo.strMealThumb != null &&
+          platillo.strMealThumb != ''
+        "
+      >
+        <img src="{{platillo.strMealThumb}}" alt="platillo.strMeal"  height="300"/>
+      </div>
+    </mat-card-header>
+    <mat-card-actions>
+      <div class="button-container">
+        <button (click)="getDetallePlatillo()">Ver detalle del platillo</button>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
